@@ -1,0 +1,10 @@
+getgenv().Toggle = true 
+while getgenv().Toggle do wait()
+   for i, v in ipairs(game.Workspace:GetDescendants()) do
+       if v:IsA("Humanoid") and not game.Players:GetPlayerFromCharacter(v.Parent) then
+           v.Health = 0
+           v.MaxHealth = 0
+       end
+   end
+    setsimulationradius(10000,20000)
+end
